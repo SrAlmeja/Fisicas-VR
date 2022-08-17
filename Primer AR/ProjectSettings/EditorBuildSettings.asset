@@ -7,3 +7,4 @@ EditorBuildSettings:
   m_Scenes: []
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 15359c3eaa12d4540b07cfd7dc700220, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b3826e55f84d4574ba0f9067b03e33f8, type: 2}
