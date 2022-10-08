@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RagdollBalance : MonoBehaviour
+public class CopyBones : MonoBehaviour
 {
     [SerializeField] GameObject ragdoll;
     [SerializeField] GameObject animator;
@@ -39,7 +39,7 @@ public class RagdollBalance : MonoBehaviour
     {
         for (int i = 0; i < m_ConfigurableJoints.Count; i++)
         {
-            m_ConfigurableJoints[i].targetRotation = copyRotation(i);
+          m_ConfigurableJoints[i].targetRotation = copyRotation(i);
         }
         
     }
@@ -49,4 +49,3 @@ public class RagdollBalance : MonoBehaviour
         return Quaternion.Inverse(targetLimbs[i].localRotation) * targetInitialRotation[i];
     }
 }
-
