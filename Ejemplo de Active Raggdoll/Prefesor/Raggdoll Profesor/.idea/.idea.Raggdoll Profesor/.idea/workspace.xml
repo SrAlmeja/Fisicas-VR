@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d9bb8d7-a0e5-45a7-bac5-f61dd7770736" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/.idea/.idea.active-ragdolls/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/.idea/.idea.active-ragdolls/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/.idea/.idea.active-ragdolls/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../Internet/active-ragdolls-master/active-ragdolls/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animators/Bot.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/Bot.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer AR/Assets/NightmareStudios/Scripts/Ragdolls/RagdollBalance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer AR/Assets/NightmareStudios/Scripts/Ragdolls/RagdollBalance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer AR/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer AR/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer AR/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer AR/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer AR/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer AR/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer AR/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer AR/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Raggdoll Profesor/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665162150636</updated>
-      <workItem from="1665162212314" duration="2769000" />
+      <workItem from="1665162212314" duration="2770000" />
     </task>
     <servers />
   </component>
