@@ -11,7 +11,6 @@ public class AnimatorController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
         FindColiders();
     }
 
@@ -47,7 +46,9 @@ public class AnimatorController : MonoBehaviour
     {
         HP -= amount;
         Debug.Log(HP);
+        animator.ResetTrigger("Idle");
         animator.SetTrigger("Hit");
+        
         if (HP <= 0)
         {
             YouAreDead();    
@@ -57,6 +58,8 @@ public class AnimatorController : MonoBehaviour
 
     void YouAreDead()
     {
+        animator.ResetTrigger("Idle");
+        animator.ResetTrigger("Hit");
         animator.SetTrigger("Die");
         StartCoroutine(Die());
     }
