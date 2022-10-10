@@ -8,6 +8,8 @@ public class AnimatorController : MonoBehaviour
 {
     public Animator animator;
     private float elapsedTime, coldown=2f;
+    [SerializeField] private GameObject MRBeen;
+    private Vector3 beenSpawn;
 
     private void Awake()
     {
@@ -70,5 +72,20 @@ public class AnimatorController : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         animator.enabled = false;
+        StartCoroutine(HeDie());
+    }
+
+    IEnumerator HeDie()
+    {
+        yield return new WaitForSeconds(5);
+        StartCoroutine(Reborn());
+    }
+
+    IEnumerator Reborn()
+    {
+        yield return new WaitForSeconds(1);
+        animator.ResetTrigger("Die");
+        animator.ResetTrigger("Hit");
+        animator.SetTrigger("Idle");
     }
 }
