@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,24 +23,24 @@ public class BouyancyBase : MonoBehaviour
     }
 
     // Update is called once per frame
-   void FixedUpdate()
-    {
-        float difference = transform.position.y - waterHeight;
-
-        if (difference < 0)
-        {
-            rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), transform.position, ForceMode.Force);
-            if (!underwater)
-            {
-                underwater = true; SwithState(underwater);
-            }
-        }
-        else if (underwater)
-        {
-            underwater = false;
-            SwithState(underwater);
-        }
-    }
+   // void FixedUpdate()
+   //  {
+   //      float difference = transform.position.y - waterHeight;
+   //
+   //      if (difference < 0)
+   //      {
+   //          rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), transform.position, ForceMode.Force);
+   //          if (!underwater)
+   //          {
+   //              underwater = true; SwithState(underwater);
+   //          }
+   //      }
+   //      else if (underwater)
+   //      {
+   //          underwater = false;
+   //          SwithState(underwater);
+   //      }
+   //  }
 
     void SwithState(bool isUnderwater)
     {
@@ -54,5 +55,26 @@ public class BouyancyBase : MonoBehaviour
             rb.angularDrag = airAngularDrag;
         }
 
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            float difference = transform.position.y - waterHeight;
+            
+            waterHeight = (other.transform.position.y + (other.transform.localScale.y / 2));
+            rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), transform.position, ForceMode.Force);
+            if (!underwater)
+            {
+                underwater = true; SwithState(underwater);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        underwater = false;
+        SwithState(underwater);
     }
 }

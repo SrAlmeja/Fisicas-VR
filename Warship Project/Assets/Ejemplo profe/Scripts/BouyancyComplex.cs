@@ -14,7 +14,7 @@ public class BouyancyComplex : MonoBehaviour
     public float airAngularDrag = 0f;
     public float floatingPower = 15f;
 
-    public float waterHeight = 0f;
+    // public float waterHeight = 0f;
 
     Rigidbody rb;
 
@@ -25,32 +25,32 @@ public class BouyancyComplex : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
     // Update is called once per frame
-     void FixedUpdate()
-    {
-        floatersUnderwater = 0;
-        for (int i = 0; i < floaters.Length; i++)
-        {
-            float difference = floaters[i].position.y - waterHeight;
-            if (difference < 0)
-            {
-                rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), floaters[i].position, ForceMode.Force);
-                floatersUnderwater += 1;
-                if (!underwater)
-                {
-                    underwater = true; SwithState(underwater);
-                }
-            }
+    //  void FixedUpdate()
+    // {
+    //     floatersUnderwater = 0;
+    //     for (int i = 0; i < floaters.Length; i++)
+    //     {
+    //         float difference = floaters[i].position.y - waterHeight;
+    //         if (difference < 0)
+    //         {
+    //             rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), floaters[i].position, ForceMode.Force);
+    //             floatersUnderwater += 1;
+    //             if (!underwater)
+    //             {
+    //                 underwater = true; SwithState(underwater);
+    //             }
+    //         }
+    //
+    //
+    //     }
+        //
+        // if(underwater && floatersUnderwater ==0)
+        // {
+        //
+        //     underwater = false; SwithState(underwater);
+        // }
 
-
-        }
-
-        if(underwater && floatersUnderwater ==0)
-        {
-
-            underwater = false; SwithState(underwater);
-        }
-
-    }
+    // }
     void SwithState(bool isUnderwater)
     {
         if (isUnderwater)
@@ -64,5 +64,32 @@ public class BouyancyComplex : MonoBehaviour
             rb.angularDrag = airAngularDrag;
         }
 
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            float waterHeight = (other.transform.position.y + (other.transform.localScale.y / 2));
+            floatersUnderwater = 0;
+            for (int i = 0; i < floaters.Length; i++)
+            {
+                float difference = floaters[i].position.y - waterHeight;
+
+                rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(difference), floaters[i].position, ForceMode.Force);
+                floatersUnderwater += 1;
+                if (!underwater)
+                {
+                    underwater = true; SwithState(underwater);
+                }
+            }
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        underwater = false;
+        SwithState(underwater);
     }
 }
