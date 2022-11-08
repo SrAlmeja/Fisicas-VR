@@ -3,11 +3,7 @@
     "references": [
         "Unity.XR.Management.Editor",
         "Unity.XR.Management.Samples",
-        "Unity.XR.Management",
-        "UnityEditor.UI",
-        "UnityEngine.UI",
-        "UnityEditor.TestRunner",
-        "UnityEngine.TestRunner"
+        "Unity.XR.Management"
     ],
     "optionalUnityReferences": [
     ],
