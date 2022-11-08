@@ -88,12 +88,12 @@ public class Canon_CanonBall : MonoBehaviour
         //should get max number of zombies in the game through layer
         Collider[] hits = Physics.OverlapSphere(transform.position,blastRadius,layers);
         
-        foreach (var hit in hits)
-        {
-            //Debug.Log(hit.name);
-            if (!TryGetGeneralTarget(hit.gameObject)) continue;
-            hit.GetComponent<IGeneralTarget>().ReceiveRayCaster(gameObject, damage);
-        }
+        // foreach (var hit in hits)
+        // {
+        //     //Debug.Log(hit.name);
+        //     if (!TryGetGeneralTarget(hit.gameObject)) continue;
+        //     hit.GetComponent<IGeneralTarget>().ReceiveRayCaster(gameObject, damage);
+        // }
     }
     
     private void PlayAudio(AudioClip clip, float volume = 1f)
