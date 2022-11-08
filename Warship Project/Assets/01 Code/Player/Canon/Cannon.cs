@@ -9,7 +9,7 @@ public class Cannon : MonoBehaviour
 {
     [SerializeField] private InputActionReference inputActionReference;
     [SerializeField] private GameObject cannonToRotate;
-    //[SerializeField] private HandHolder _handHolder;
+    [SerializeField] private HandHolder _handHolder;
     [SerializeField] private bool _isGrabbingHolders = false;
     [SerializeField] private int maxProjectiles;
     [SerializeField] private float launchForce;
@@ -21,7 +21,7 @@ public class Cannon : MonoBehaviour
     void Start()
     {
         inputActionReference.action.performed += ctx => FireCannon();
-        //_handHolder.OnGrabbed += HandleGrabHolders;
+        _handHolder.OnGrabbed += HandleGrabHolders;
         BuildPool();
     }
 
@@ -29,15 +29,15 @@ public class Cannon : MonoBehaviour
     {
         if (_isGrabbingHolders)
         {
-            //RotateCannon();
+            RotateCannon();
         }
     }
 
-    // private void RotateCannon()
-    // {
-    //     Vector3 aimDirection =  _handHolder.transform.position - cannonToRotate.transform.position;
-    //     cannonToRotate.transform.rotation =  Quaternion.LookRotation(aimDirection);
-    // }
+    private void RotateCannon()
+    {
+        Vector3 aimDirection =  _handHolder.transform.position - cannonToRotate.transform.position;
+        cannonToRotate.transform.rotation =  Quaternion.LookRotation(aimDirection);
+    }
     
     private void HandleGrabHolders(bool isGrabbing)
     {

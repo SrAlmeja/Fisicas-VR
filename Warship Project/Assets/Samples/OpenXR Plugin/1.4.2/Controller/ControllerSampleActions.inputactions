@@ -193,6 +193,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeStateLeftCanon",
+                    "type": "Button",
+                    "id": "6d6973d7-e76f-49ea-81aa-dddeaae1e6a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHandGod",
+                    "type": "Button",
+                    "id": "ec1a09a5-01ff-488d-aae1-d11a6bf5d80c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootCanon",
+                    "type": "Button",
+                    "id": "698d0d19-7828-459c-b5da-516a12284fa7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -437,6 +464,39 @@
                     "action": "TriggerTouch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a20ea80-1d78-4385-9044-4dfa933f62d7",
+                    "path": "<XRController>{LeftHand}/touchpad1Pressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeStateLeftCanon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbe598ea-6ca9-44d7-b806-c1237cde694b",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHandGod",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88d0527a-a9bc-4620-923b-51d0218ee3e3",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootCanon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -629,6 +689,33 @@
                     "type": "PassThrough",
                     "id": "d58abe56-873a-44a7-93b1-40630a1829dd",
                     "expectedControlType": "Haptic",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "0f0ce5f2-1a0a-47bd-b261-9c6538327c43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ChangeStateRightCanon",
+                    "type": "Button",
+                    "id": "f7e6bd84-5d1d-486a-8c70-2e36d529111c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GodRightHand",
+                    "type": "Button",
+                    "id": "f83f7f69-4efd-4af6-9718-8dfb36dab08d",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -874,6 +961,39 @@
                     "processors": "",
                     "groups": "XR Usage",
                     "action": "TriggerTouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3bde2711-91ad-43a4-9cf4-cea2756b604e",
+                    "path": "<XRController>{RightHand}/triggerTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b4db056f-d5d9-4cc9-bd56-157fae4bb229",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeStateRightCanon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3852040a-e221-41d1-a40b-16ed1331837a",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GodRightHand",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
